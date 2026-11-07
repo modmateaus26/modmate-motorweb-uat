@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: modmate-motorweb-uat
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: MOTORWEB_UAT_P12_BASE64
+        sync: false
+      - key: MOTORWEB_UAT_PASSWORD
+        sync: false
